@@ -1,5 +1,6 @@
 var today = dayjs();
-var calendarTimes = document.querySelectorAll(".times")
+var saveData = $(".description");
+var calendarTimes = document.querySelectorAll(".times");
 var getId = []; 
 
 // Pushes the ids from the div containers into an array
@@ -14,13 +15,13 @@ $('#currentDay').text(today.format('dddd, MMM D hh:mmA'));
 // in the html.
 $(function (currentHour) {
   var currentHour = dayjs().hour()
-  for(let i=9;i<=17;i++){
+  for(let i=8;i<=17;i++){
      if(i<currentHour){
-  $("#"+i+"00").children("textarea").addClass("past"); }
+  $("#"+i).children("textarea").addClass("past"); }
     else if(i === currentHour) {
-      $("#"+i+"00").children("textarea").addClass("present");  
+      $("#"+i).children("textarea").addClass("present");  
     } else {
-      $("#"+i+"00").children("textarea").addClass("future");
+      $("#"+i).children("textarea").addClass("future");
     }
   }
   });
@@ -31,11 +32,14 @@ $(function (currentHour) {
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
 
-  $(document).ready(function(e){
-    $(".saveBtn").on("click", function() {
-        localStorage.setItem($(this).prop("id"), $(this).prev().val());
-        console.log(localStorage.getItem($(this).prop("id")));
-    })});
+  // $(document).ready(function(){
+    $(".saveBtn").on("click", function(e) {
+      e.preventDefault(saveData);
+      var getId = $(this).parent().attr("id");
+      var getText = $(this).siblings(".description").val();
+      localStorage.setItem(getId, getText);
+      console.log(getId, getText)
+    });
 
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
