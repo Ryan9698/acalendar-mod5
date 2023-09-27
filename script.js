@@ -23,7 +23,6 @@ $(function (currentHour) {
   }
   });
 
-
   // Click event created to save information to local storage based on id.
     $(".saveBtn").on("click", function(e) {
       e.preventDefault();
