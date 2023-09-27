@@ -43,5 +43,5 @@ Please refer to the LICENSE in the repo.
 
 ## Screenshots of HTML/CSS file:
 
-![HTML Screenshot](assets/mod1ss1.png)
-![CSS Screenshot](assets/mod1ss2.png)
+![HTML Screenshot](Assets/samplejs.png)
+![CSS Screenshot](Assets/livedeploy.png)
