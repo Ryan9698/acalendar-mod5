@@ -8,32 +8,22 @@ $('div.getId div').each(function(times) {
 });
 $('#currentDay').text(today.format('dddd, MMM D hh:mmA'));
 
-// var eightAm = $('#0800');
-// var nineAm =$('#0900');
-// var fivePm = $('#1700');
-// eightAm = dayjs("8", "h");
-// nineAm = dayjs("9", "h");
-// tenAm = dayjs("10", "h");
-// elevenAm = dayjs("11", "h");
-// noon = dayjs("12", "h");
-// onePm = dayjs("13", "h");
-// twoPm = dayjs("14", "h");
-// threePm = dayjs("15", "h");
-// fourPm = dayjs("16", "h")
-// fivePm = dayjs("17", "h");
-//
+
  // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-$(function (getId) {
-  for (var i = 0; i < getId.length; i++) {
-
-    if (getId[i] < today) {
-      console.log("true") } else {
-        console.log("false")
-      }
+$(function (currentHour) {
+  var currentHour = dayjs().hour()
+  for(let i=9;i<=17;i++){
+     if(i<currentHour){
+  $("#"+i+"00").children("textarea").addClass("past"); }
+    else if(i === currentHour) {
+      $("#"+i+"00").children("textarea").addClass("present");  
+    } else {
+      $("#"+i+"00").children("textarea").addClass("future");
     }
-  })
+  }
+  });
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
@@ -41,13 +31,12 @@ $(function (getId) {
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
 
-  $(document).ready(function(event){
-    localId = $(event.target)
+  $(document).ready(function(e){
     $(".saveBtn").on("click", function() {
         localStorage.setItem($(this).prop("id"), $(this).prev().val());
-        console.log(localId + localStorage.getItem($(this).prop("id")));
-    })
-});
+        console.log(localStorage.getItem($(this).prop("id")));
+    })});
+
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
   // attribute of each time-block be used to conditionally add or remove the
