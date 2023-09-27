@@ -1,27 +1,21 @@
-# Module 4 Challenge: Workday Scheduler
+# Module 4 Challenge: Workday Planner
 
 ## Description
 
-This website was designed to offer marketing and management solutions to clients. The purpose of my
-work was to refactor the previous code and consolidate needless elements and restrcture the files to make
-them more accessible in the future.
+This app was designed to be a workday planner in which the user can input the information they 
+need in the appropriate text boxes and save them to local storage in order to be pulled up again
+at a later time. A user can quickly discern where to place data by the colors of the text areas.
+Blue signifies that the hour has already passed, red is the current hour we are in, and green is
+used for future appointments. The schedule is based on an average workday of 8AM-5PM. 
+ 
+The website will save the information put into the text fields by clicking the
+save button and will remain in the boxes until changed. In order to change the text, a user only
+needs to overwrite the text and click the save button again.
 
-By organizing and restructuring the files, the site is much easier to manage. The files have been
-organized in a way that allows an editor to easily locate different elements in both HTML and CSS.
-By changing the different semantic tags and removing needless ones, the site is now formatted
-in a way that makes each section easily identifiable. By restructuring and grouping similar classes
-and elements, I was able to reduce the size of the code. I also aimed to list classes in order
-of appearance in the CSS file.
-
-I learned a great deal with this project. By going through each part of the file and analyzing it, I 
-was able to gain a much better understanding of how the code is written as well as effective ways of
-organizing elements. I learned what elements are necessary and how classes nested within eachother 
-interact. I learned how commenting is essential to communicate what is being done to a file and how
-it can make things easier for the person who works on the file after you. A lot of research and review
-of past materials was done in order for me to complete this project. Through this project, I also
-learned a great deal about Git functions and how important they are in a working environment. I made
-sure to push my files several times for practice. Most importantly, this project inspired me to review
-and research materials to further understand the concepts that I have learned.
+Like the previous projects we have worked on, I gained a great deal of knowledge with the new 
+concepts that were introduced. I learned the effectiveness of jQuery and how to utilize dayjs
+in a practical way. I also gained new experience with loops and some of the different ways they
+can be applied as well as how you can utilize ids in HTML with loops. 
 
 ## Installation
 
@@ -29,14 +23,17 @@ N/A
 
 ## Usage
 
-The site itself is used to provide marketing and management solutions to clients. The main page provides
-brief descriptions on the services they offer. At the top of the page, a user can access relevant 
-information to suit their purpose.
+To use the app, a user only needs to type in the information they want into the appropriate time
+window and click the save button. The data will be saved to local storage and the user can pull
+up the page to see the information at any point. They can exit the page and revisit it to still
+see the information.
 
 ## Credits
 
 The files necessary for this project were pulled from The Coding Bootcamp's GitHub respository.
-https://github.com/coding-boot-camp/urban-octo-telegram
+All source code such as HTML and CSS were provided by the repository. Only minor edits were made
+to these two files.
+https://github.com/coding-boot-camp/crispy-octo-meme
 
 ## License
 
