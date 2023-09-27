@@ -31,8 +31,8 @@ see the information.
 ## Credits
 
 The files necessary for this project were pulled from The Coding Bootcamp's GitHub respository.
-All source code such as HTML and CSS were provided by the repository. Only minor edits were made
-to these two files.
+All HTML and CSS were provided by the repository. Only minor edits were made
+to these two files. JavaScript files were made
 https://github.com/coding-boot-camp/crispy-octo-meme
 
 ## License
