@@ -39,9 +39,9 @@ https://github.com/coding-boot-camp/crispy-octo-meme
 
 Please refer to the LICENSE in the repo.
 
-## Link:
+## Link: https://ryan9698.github.io/acalendar-mod5/
 
-## Screenshots of HTML/CSS file:
-
-![HTML Screenshot](Assets/samplejs.png)
-![CSS Screenshot](Assets/livedeploy.png)
+## Screenshot of live deployment
+![Live Screenshot](Assets/livedeploy.png)
+## Screenshot of JavaScript
+![JS Screenshot](Assets/samplejs.png)
